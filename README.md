@@ -1,2 +1,2 @@
-# Flask Mega Tutorial
-flask app tutorial with mega
+# Detect Celebrities
+Uses Amazon Rekognition to detect celebrities within stored video
