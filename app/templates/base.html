@@ -1,15 +1,11 @@
 <html>
     <head>
-        {% if title %}
-        <title>{{ title }} - microblog</title>
-        {% else %}
-        <title>microblog</title>
-        {% endif %}
+        <title>Celebrity Stat Detector</title>
     </head>
     <body>
            <div>
-        Microblog:
-        <a href="{{ url_for('index') }}">Home</a>
+        Nav:
+        <a href="{{ url_for('index') }}">Upload</a>
         {% if current_user.is_anonymous %}
         <a href="{{ url_for('login') }}">Login</a>
         {% else %}
