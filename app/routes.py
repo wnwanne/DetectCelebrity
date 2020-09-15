@@ -24,23 +24,16 @@ def index():
                     Body = img,
                     Key=filename
                 )
-                return("<h1>upload successful<h1>")
+                return render_template("display.html")
         except Exception as e:
             return (str(e))
     return render_template("index.html")
 
-    # return '''<form method=POST enctype=multipart/form-data action="upload">
-    #     <input type=file name=myfile>
-    #     <input type=submit>
-    #     </form>'''
 
-# @app.route('/upload', methods=['POST'])
-# def upload():
-#     s3 = boto3.resource('s3')
-#
-#     s3.Bucket('winnie-analyzevid-ab2').put_object(Key='colortracingshot.mov', Body=request.files['myfile'])
-#
-#     return '<h1>File saved to S3</h1>'
+@app.route("/display", methods=['GET', 'POST'])
+def display():
+    return render_template('display.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
